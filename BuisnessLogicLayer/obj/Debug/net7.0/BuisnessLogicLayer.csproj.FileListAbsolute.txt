@@ -1,0 +1,17 @@
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\obj\Debug\net7.0\BuisnessLogicLayer.csproj.AssemblyReference.cache
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\obj\Debug\net7.0\BuisnessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\obj\Debug\net7.0\BuisnessLogicLayer.AssemblyInfoInputs.cache
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\obj\Debug\net7.0\BuisnessLogicLayer.AssemblyInfo.cs
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\obj\Debug\net7.0\BuisnessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\bin\Debug\net7.0\BuisnessLogicLayer.deps.json
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\bin\Debug\net7.0\BuisnessLogicLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\bin\Debug\net7.0\BuisnessLogicLayer.pdb
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\bin\Debug\net7.0\BuisnessObjectLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\bin\Debug\net7.0\DataAccessLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\bin\Debug\net7.0\DataAccessLayer.pdb
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\bin\Debug\net7.0\BuisnessObjectLayer.pdb
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\obj\Debug\net7.0\BuisnessLogicLayer.csproj.CopyComplete
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\obj\Debug\net7.0\BuisnessLogicLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\obj\Debug\net7.0\refint\BuisnessLogicLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\obj\Debug\net7.0\BuisnessLogicLayer.pdb
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessLogicLayer\obj\Debug\net7.0\ref\BuisnessLogicLayer.dll

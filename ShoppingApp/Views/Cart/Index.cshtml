@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using BuisnessObjectLayer;
+@{
+    var products = ViewData["cart"] as List<Product>;
+    if (@products == null)
+    {
+        <h1>No Products In Your Cart</h1>
+    }
+    else
+    {
+        foreach (Product product in products)
+        {
+            <b>@product.Name &emsp;&emsp;&emsp;</b> @product.Price <span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+            <a href="/Cart/RemoveFromCart/@product.Id">Remove</a>
+            <br />
+
+            <br />
+        }
+    }
+
+}
+<br />
+<a href="/Products/Index">Add More Products</a>

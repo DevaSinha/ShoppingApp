@@ -1,0 +1,12 @@
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\bin\Debug\net7.0\BuisnessObjectLayer.deps.json
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\bin\Debug\net7.0\BuisnessObjectLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\bin\Debug\net7.0\BuisnessObjectLayer.pdb
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\obj\Debug\net7.0\BuisnessObjectLayer.csproj.AssemblyReference.cache
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\obj\Debug\net7.0\BuisnessObjectLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\obj\Debug\net7.0\BuisnessObjectLayer.AssemblyInfoInputs.cache
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\obj\Debug\net7.0\BuisnessObjectLayer.AssemblyInfo.cs
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\obj\Debug\net7.0\BuisnessObjectLayer.csproj.CoreCompileInputs.cache
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\obj\Debug\net7.0\BuisnessObjectLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\obj\Debug\net7.0\refint\BuisnessObjectLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\obj\Debug\net7.0\BuisnessObjectLayer.pdb
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\BuisnessObjectLayer\obj\Debug\net7.0\ref\BuisnessObjectLayer.dll

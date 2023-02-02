@@ -1,0 +1,15 @@
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.deps.json
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\bin\Debug\net7.0\DataAccessLayer.pdb
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\bin\Debug\net7.0\BuisnessObjectLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\bin\Debug\net7.0\BuisnessObjectLayer.pdb
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\obj\Debug\net7.0\refint\DataAccessLayer.dll
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\obj\Debug\net7.0\DataAccessLayer.pdb
+C:\Users\dksds\OneDrive\Documents\study\C-DAC\DotNet Core\webapp\DataAccessLayer\obj\Debug\net7.0\ref\DataAccessLayer.dll

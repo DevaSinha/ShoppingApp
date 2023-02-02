@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Products";
+}
+@using ShoppingApp.Controllers;
+@using BuisnessObjectLayer;
+
+@{
+    List<Product> products = ViewData["products"] as List<Product>; 
+}
+
+<body style="background-color: azure;">
+    <ul>
+        @{
+            foreach (Product prod in products)
+            {
+                <li class="col-xl-4 col-lg-6 mb-4">
+                    <div >
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <a href="/Products/Details/@prod.Id">
+                                        <img src="@prod.Image" alt="" style="width: 70px; height: 100px" />
+                                    </a>
+                                    <div class="ms-3">
+                                        <p class="fw-bold mb-1">@prod.Name</p>
+                                        <p class="text-muted mb-0">@prod.Price</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            }
+        }
+    </ul>
+</body>

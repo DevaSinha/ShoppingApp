@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+    @using BuisnessObjectLayer;
+    @{  
+       var product = ViewData["Product"] as Product;   
+    }
+  <div class="col-xl-6 mb-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img
+              src="@product.Image"
+              alt=""
+              style="width: 100px; height: 120px"
+            />
+            <div class="ms-3">
+              <p class="fw-bold mb-1">@product.Name</p>
+              <p class="text-muted mb-0">Screen : @product.Screen</p>
+              <p class="text-muted mb-0">Camera : @product.Camera</p>
+              <p class="text-muted mb-0">Ram : @product.Ram GB</p>
+              <p class="text-muted mb-0">Price : Rupees @product.Price</p>
+            </div>
+          </div>
+          <span class="badge rounded-pill badge-success">Active</span>
+        </div>
+      </div>
+      <div
+        class="card-footer border-0 bg-light p-2 d-flex justify-content-around"
+      >
+        <a
+          class="btn btn-link m-0 text-reset"
+          href="/Cart/AddToCart/@product.Id"
+          role="button"
+          data-ripple-color="primary"
+          >Add To Cart<i class="fas fa-phone ms-2"></i
+        ></a>
+      </div>
+    </div>
+  </div>
