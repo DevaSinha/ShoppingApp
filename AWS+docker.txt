@@ -1,0 +1,1416 @@
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-1019-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Nov 12 19:45:40 UTC 2022
+
+  System load:  0.0               Processes:                107
+  Usage of /:   36.2% of 7.57GB   Users logged in:          0
+  Memory usage: 35%               IPv4 address for docker0: 172.17.0.1
+  Swap usage:   0%                IPv4 address for eth0:    172.31.0.103
+
+
+80 updates can be applied immediately.
+50 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Sat Nov 12 19:09:41 2022 from 103.252.53.94
+ubuntu@ip-172-31-0-103:~$ sudo systemctl status docker
+● docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset>
+     Active: active (running) since Sat 2022-11-12 19:14:15 UTC; 31min ago
+TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 2201 (dockerd)
+      Tasks: 21
+     Memory: 54.5M
+        CPU: 5.439s
+     CGroup: /system.slice/docker.service
+             ├─2201 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/cont>
+             ├─2537 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-por>
+             └─2549 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 808>
+
+Nov 12 19:14:15 ip-172-31-0-103 dockerd[2201]: time="2022-11-12T19:14:15.381547>
+Nov 12 19:14:15 ip-172-31-0-103 dockerd[2201]: time="2022-11-12T19:14:15.381701>
+Nov 12 19:14:15 ip-172-31-0-103 dockerd[2201]: time="2022-11-12T19:14:15.381840>
+Nov 12 19:14:15 ip-172-31-0-103 dockerd[2201]: time="2022-11-12T19:14:15.440766>
+Nov 12 19:14:15 ip-172-31-0-103 dockerd[2201]: time="2022-11-12T19:14:15.659656>
+Nov 12 19:14:15 ip-172-31-0-103 dockerd[2201]: time="2022-11-12T19:14:15.759276>
+Nov 12 19:14:15 ip-172-31-0-103 dockerd[2201]: time="2022-11-12T19:14:15.832572>
+Nov 12 19:14:15 ip-172-31-0-103 dockerd[2201]: time="2022-11-12T19:14:15.832903>
+Nov 12 19:14:15 ip-172-31-0-103 systemd[1]: Started Docker Application Containe>
+lines 1-23
+ubuntu@ip-172-31-0-103:~$ sudo docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+nginx        latest    76c69feac34e   2 weeks ago   142MB
+ubuntu@ip-172-31-0-103:~$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                                                                                                                       PORTS                                   NAMES
+b48407f10710   nginx:latest   "/docker-entrypoint.…"   27 minutes ago   Up 27 mi                                                                                                             nutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp   gangaServer
+ubuntu@ip-172-31-0-103:~$ node -v
+v12.22.9
+ubuntu@ip-172-31-0-103:~$ npm -v
+8.5.1
+ubuntu@ip-172-31-0-103:~$ git clone https://github.com/Vivekkumar115git/webapp.g                                                                                                             it
+Cloning into 'webapp'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (7/7), done.
+ubuntu@ip-172-31-0-103:~$ ls
+webapp
+ubuntu@ip-172-31-0-103:~$ cd webapp
+ubuntu@ip-172-31-0-103:~/webapp$ ls
+Dockerfile  README.md  package.json  profile  server.js
+ubuntu@ip-172-31-0-103:~/webapp$ node install express
+internal/modules/cjs/loader.js:818
+  throw err;
+  ^
+
+Error: Cannot find module '/home/ubuntu/webapp/install'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:815:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:667:27)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js                                                                                                             :60:12)
+    at internal/main/run_main_module.js:17:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+ubuntu@ip-172-31-0-103:~/webapp$ node install express
+internal/modules/cjs/loader.js:818
+  throw err;
+  ^
+
+Error: Cannot find module '/home/ubuntu/webapp/install'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:815:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:667:27)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js                                                                                                             :60:12)
+    at internal/main/run_main_module.js:17:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+ubuntu@ip-172-31-0-103:~/webapp$ sudo apt install express
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package express
+ubuntu@ip-172-31-0-103:~/webapp$ sudo apt node install express
+E: Invalid operation node
+ubuntu@ip-172-31-0-103:~/webapp$ node install express
+internal/modules/cjs/loader.js:818
+  throw err;
+  ^
+
+Error: Cannot find module '/home/ubuntu/webapp/install'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:815:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:667:27)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js                                                                                                             :60:12)
+    at internal/main/run_main_module.js:17:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+ubuntu@ip-172-31-0-103:~/webapp$ npm install express
+
+added 58 packages, and audited 59 packages in 7s
+
+7 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+ubuntu@ip-172-31-0-103:~/webapp$ ls
+Dockerfile  node_modules       package.json  server.js
+README.md   package-lock.json  profile
+ubuntu@ip-172-31-0-103:~/webapp$ cd ..
+ubuntu@ip-172-31-0-103:~$ ls
+webapp
+ubuntu@ip-172-31-0-103:~$ cd ..
+ubuntu@ip-172-31-0-103:/home$ ls
+ubuntu
+ubuntu@ip-172-31-0-103:/home$ sudo ls
+ubuntu
+ubuntu@ip-172-31-0-103:/home$ cd ubuntu
+ubuntu@ip-172-31-0-103:~$ ls
+webapp
+ubuntu@ip-172-31-0-103:~$ sudo docker build -t webapp .
+unable to prepare context: unable to evaluate symlinks in Dockerfile path: lstat                                                                                                              /home/ubuntu/Dockerfile: no such file or directory
+ubuntu@ip-172-31-0-103:~$ cd ..
+ubuntu@ip-172-31-0-103:/home$ ls
+ubuntu
+ubuntu@ip-172-31-0-103:/home$ sudo docker build -t webapp .
+unable to prepare context: unable to evaluate symlinks in Dockerfile path: lstat                                                                                                              /home/Dockerfile: no such file or directory
+ubuntu@ip-172-31-0-103:/home$ sudo docker build -t webapp .
+unable to prepare context: unable to evaluate symlinks in Dockerfile path: lstat                                                                                                              /home/Dockerfile: no such file or directory
+ubuntu@ip-172-31-0-103:/home$ ls
+ubuntu
+ubuntu@ip-172-31-0-103:/home$ cd ubuntu
+ubuntu@ip-172-31-0-103:~$ ls
+webapp
+ubuntu@ip-172-31-0-103:~$ cd webapp
+ubuntu@ip-172-31-0-103:~/webapp$ ls
+Dockerfile  node_modules       package.json  server.js
+README.md   package-lock.json  profile
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker build -t webapp .
+Sending build context to Docker daemon  2.493MB
+Step 1/7 : FROM node:7
+7: Pulling from library/node
+ad74af05f5a2: Pull complete
+2b032b8bbe8b: Pull complete
+a9a5b35f6ead: Pull complete
+3245b5a1c52c: Pull complete
+afa075743392: Pull complete
+9fb9f21641cd: Pull complete
+3f40ad2666bc: Pull complete
+49c0ed396b49: Pull complete
+Digest: sha256:af5c2c6ac8bc3fa372ac031ef60c45a285eeba7bce9ee9ed66dad3a01e29ab8d
+Status: Downloaded newer image for node:7
+ ---> d9aed20b68a4
+Step 2/7 : WORKDIR /app
+ ---> Running in a92d1b330151
+Removing intermediate container a92d1b330151
+ ---> 272da8f898ff
+Step 3/7 : COPY package.json /app
+ ---> 58ec0a0071af
+Step 4/7 : RUN npm install
+ ---> Running in 78ca725bc51e
+npm info it worked if it ends with ok
+npm info using npm@4.2.0
+npm info using node@v7.10.1
+npm info attempt registry request try #1 at 7:58:14 PM
+npm http request GET https://registry.npmjs.org/expess
+npm info attempt registry request try #1 at 7:58:14 PM
+npm http request GET https://registry.npmjs.org/express
+npm http 200 https://registry.npmjs.org/express
+npm info addNameTag [ 'express', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:14 PM
+npm info attempt registry request try #1 at 7:58:14 PM
+npm http fetch GET https://registry.npmjs.org/express/-/express-4.18.2.tgz
+npm http fetch 200 https://registry.npmjs.org/express/-/express-4.18.2.tgz
+npm http 200 https://registry.npmjs.org/expess
+npm info retry fetch attempt 1 at 7:58:15 PM
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http fetch GET https://registry.npmjs.org/expess/-/expess-0.0.1-security.tgz
+npm http fetch 200 https://registry.npmjs.org/expess/-/expess-0.0.1-security.tgz
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/accepts
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/array-flatten
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/body-parser
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/content-disposition
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/content-type
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/cookie
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/cookie-signature
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/debug
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/depd
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/encodeurl
+npm info attempt registry request try #1 at 7:58:15 PM
+npm http request GET https://registry.npmjs.org/escape-html
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/etag
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/finalhandler
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/fresh
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/http-errors
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/merge-descriptors
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/methods
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/on-finished
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/parseurl
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/path-to-regexp
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/proxy-addr
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/qs
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/range-parser
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/safe-buffer
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/send
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/serve-static
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/setprototypeof
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/statuses
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/type-is
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/utils-merge
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http request GET https://registry.npmjs.org/vary
+npm http 200 https://registry.npmjs.org/array-flatten
+npm http 200 https://registry.npmjs.org/cookie-signature
+npm http 200 https://registry.npmjs.org/on-finished
+npm http 200 https://registry.npmjs.org/statuses
+npm http 200 https://registry.npmjs.org/content-disposition
+npm http 200 https://registry.npmjs.org/setprototypeof
+npm http 200 https://registry.npmjs.org/http-errors
+npm http 200 https://registry.npmjs.org/cookie
+npm http 200 https://registry.npmjs.org/safe-buffer
+npm http 200 https://registry.npmjs.org/finalhandler
+npm http 200 https://registry.npmjs.org/send
+npm http 200 https://registry.npmjs.org/path-to-regexp
+npm http 200 https://registry.npmjs.org/serve-static
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.                                                                                                             1.tgz
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/cookie-signature/-/cookie-signatur                                                                                                             e-1.0.6.tgz
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/on-finished/-/on-finished-2.4.1.tg                                                                                                             z
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/content-disposition/-/content-disp                                                                                                             osition-0.5.4.tgz
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.                                                                                                             2.0.tgz
+npm http fetch 200 https://registry.npmjs.org/array-flatten/-/array-flatten-1.1.                                                                                                             1.tgz
+npm http fetch 200 https://registry.npmjs.org/cookie-signature/-/cookie-signatur                                                                                                             e-1.0.6.tgz
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/http-errors/-/http-errors-2.0.0.tg                                                                                                             z
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/cookie/-/cookie-0.5.0.tgz
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tg                                                                                                             z
+npm http fetch 200 https://registry.npmjs.org/on-finished/-/on-finished-2.4.1.tg                                                                                                             z
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/finalhandler/-/finalhandler-1.2.0.                                                                                                             tgz
+npm http fetch 200 https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz
+npm http fetch 200 https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.                                                                                                             2.0.tgz
+npm http fetch 200 https://registry.npmjs.org/content-disposition/-/content-disp                                                                                                             osition-0.5.4.tgz
+npm http fetch 200 https://registry.npmjs.org/http-errors/-/http-errors-2.0.0.tg                                                                                                             z
+npm http fetch 200 https://registry.npmjs.org/cookie/-/cookie-0.5.0.tgz
+npm http fetch 200 https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tg                                                                                                             z
+npm http fetch 200 https://registry.npmjs.org/finalhandler/-/finalhandler-1.2.0.                                                                                                             tgz
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/send/-/send-0.18.0.tgz
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.                                                                                                             1.7.tgz
+npm info retry fetch attempt 1 at 7:58:16 PM
+npm info attempt registry request try #1 at 7:58:16 PM
+npm http fetch GET https://registry.npmjs.org/serve-static/-/serve-static-1.15.0                                                                                                             .tgz
+npm http fetch 200 https://registry.npmjs.org/send/-/send-0.18.0.tgz
+npm http fetch 200 https://registry.npmjs.org/serve-static/-/serve-static-1.15.0                                                                                                             .tgz
+npm http fetch 200 https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-0.                                                                                                             1.7.tgz
+npm http 200 https://registry.npmjs.org/escape-html
+npm http 200 https://registry.npmjs.org/proxy-addr
+npm http 200 https://registry.npmjs.org/accepts
+npm http 200 https://registry.npmjs.org/merge-descriptors
+npm http 200 https://registry.npmjs.org/methods
+npm http 200 https://registry.npmjs.org/utils-merge
+npm http 200 https://registry.npmjs.org/vary
+npm http 200 https://registry.npmjs.org/encodeurl
+npm http 200 https://registry.npmjs.org/etag
+npm http 200 https://registry.npmjs.org/parseurl
+npm http 200 https://registry.npmjs.org/fresh
+npm http 200 https://registry.npmjs.org/type-is
+npm http 200 https://registry.npmjs.org/depd
+npm http 200 https://registry.npmjs.org/range-parser
+npm http 200 https://registry.npmjs.org/body-parser
+npm http 200 https://registry.npmjs.org/debug
+npm http 200 https://registry.npmjs.org/content-type
+npm info addNameTag [ 'escape-html', 'latest' ]
+npm info addNameTag [ 'proxy-addr', 'latest' ]
+npm info addNameTag [ 'accepts', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tg                                                                                                             z
+npm info addNameTag [ 'methods', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.7.tgz
+npm info addNameTag [ 'vary', 'latest' ]
+npm info addNameTag [ 'encodeurl', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/accepts/-/accepts-1.3.8.tgz
+npm info addNameTag [ 'etag', 'latest' ]
+npm info addNameTag [ 'parseurl', 'latest' ]
+npm info addNameTag [ 'type-is', 'latest' ]
+npm http fetch 200 https://registry.npmjs.org/escape-html/-/escape-html-1.0.3.tg                                                                                                             z
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/merge-descriptors/-/merge-descript                                                                                                             ors-1.0.1.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/methods/-/methods-1.1.2.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tg                                                                                                             z
+npm http fetch 200 https://registry.npmjs.org/proxy-addr/-/proxy-addr-2.0.7.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/vary/-/vary-1.1.2.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/encodeurl/-/encodeurl-1.0.2.tgz
+npm info addNameTag [ 'range-parser', 'latest' ]
+npm http fetch 200 https://registry.npmjs.org/accepts/-/accepts-1.3.8.tgz
+npm http 200 https://registry.npmjs.org/qs
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/etag/-/etag-1.8.1.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz
+npm http fetch 200 https://registry.npmjs.org/merge-descriptors/-/merge-descript                                                                                                             ors-1.0.1.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/type-is/-/type-is-1.6.18.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/depd/-/depd-2.0.0.tgz
+npm http fetch 200 https://registry.npmjs.org/methods/-/methods-1.1.2.tgz
+npm http fetch 200 https://registry.npmjs.org/utils-merge/-/utils-merge-1.0.1.tg                                                                                                             z
+npm http fetch 200 https://registry.npmjs.org/encodeurl/-/encodeurl-1.0.2.tgz
+npm http fetch 200 https://registry.npmjs.org/vary/-/vary-1.1.2.tgz
+npm http fetch 200 https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz
+npm http fetch 200 https://registry.npmjs.org/etag/-/etag-1.8.1.tgz
+npm http fetch 200 https://registry.npmjs.org/parseurl/-/parseurl-1.3.3.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.                                                                                                             tgz
+npm http fetch 200 https://registry.npmjs.org/type-is/-/type-is-1.6.18.tgz
+npm http fetch 200 https://registry.npmjs.org/depd/-/depd-2.0.0.tgz
+npm http fetch 200 https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.                                                                                                             tgz
+npm info addNameTag [ 'content-type', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/body-parser/-/body-parser-1.20.1.t                                                                                                             gz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/debug/-/debug-2.6.9.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/content-type/-/content-type-1.0.4.                                                                                                             tgz
+npm http fetch 200 https://registry.npmjs.org/body-parser/-/body-parser-1.20.1.t                                                                                                             gz
+npm http fetch 200 https://registry.npmjs.org/content-type/-/content-type-1.0.4.                                                                                                             tgz
+npm http fetch 200 https://registry.npmjs.org/debug/-/debug-2.6.9.tgz
+npm info retry fetch attempt 1 at 7:58:17 PM
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http fetch GET https://registry.npmjs.org/qs/-/qs-6.11.0.tgz
+npm http fetch 200 https://registry.npmjs.org/qs/-/qs-6.11.0.tgz
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http request GET https://registry.npmjs.org/mime-types
+npm info attempt registry request try #1 at 7:58:17 PM
+npm http request GET https://registry.npmjs.org/negotiator
+npm http 200 https://registry.npmjs.org/mime-types
+npm info addNameTag [ 'mime-types', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:18 PM
+npm info attempt registry request try #1 at 7:58:18 PM
+npm http fetch GET https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz
+npm http 200 https://registry.npmjs.org/negotiator
+npm info retry fetch attempt 1 at 7:58:18 PM
+npm info attempt registry request try #1 at 7:58:18 PM
+npm http fetch GET https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz
+npm http fetch 200 https://registry.npmjs.org/mime-types/-/mime-types-2.1.35.tgz
+npm http fetch 200 https://registry.npmjs.org/negotiator/-/negotiator-0.6.3.tgz
+npm info attempt registry request try #1 at 7:58:18 PM
+npm http request GET https://registry.npmjs.org/mime-db
+npm http 200 https://registry.npmjs.org/mime-db
+npm info retry fetch attempt 1 at 7:58:20 PM
+npm info attempt registry request try #1 at 7:58:20 PM
+npm http fetch GET https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz
+npm http fetch 200 https://registry.npmjs.org/mime-db/-/mime-db-1.52.0.tgz
+npm info attempt registry request try #1 at 7:58:20 PM
+npm http request GET https://registry.npmjs.org/bytes
+npm info attempt registry request try #1 at 7:58:20 PM
+npm http request GET https://registry.npmjs.org/destroy
+npm info attempt registry request try #1 at 7:58:20 PM
+npm http request GET https://registry.npmjs.org/iconv-lite
+npm info attempt registry request try #1 at 7:58:20 PM
+npm http request GET https://registry.npmjs.org/raw-body
+npm info attempt registry request try #1 at 7:58:20 PM
+npm http request GET https://registry.npmjs.org/unpipe
+npm http 200 https://registry.npmjs.org/destroy
+npm http 200 https://registry.npmjs.org/iconv-lite
+npm http 200 https://registry.npmjs.org/bytes
+npm info retry fetch attempt 1 at 7:58:20 PM
+npm info attempt registry request try #1 at 7:58:20 PM
+npm http fetch GET https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz
+npm info retry fetch attempt 1 at 7:58:20 PM
+npm info attempt registry request try #1 at 7:58:20 PM
+npm http fetch GET https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz
+npm info retry fetch attempt 1 at 7:58:20 PM
+npm info attempt registry request try #1 at 7:58:20 PM
+npm http fetch GET https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz
+npm http fetch 200 https://registry.npmjs.org/destroy/-/destroy-1.2.0.tgz
+npm http fetch 200 https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz
+npm http fetch 200 https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz
+npm http 200 https://registry.npmjs.org/unpipe
+npm info retry fetch attempt 1 at 7:58:21 PM
+npm info attempt registry request try #1 at 7:58:21 PM
+npm http fetch GET https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz
+npm http 200 https://registry.npmjs.org/raw-body
+npm info retry fetch attempt 1 at 7:58:21 PM
+npm info attempt registry request try #1 at 7:58:21 PM
+npm http fetch GET https://registry.npmjs.org/raw-body/-/raw-body-2.5.1.tgz
+npm http fetch 200 https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz
+npm http fetch 200 https://registry.npmjs.org/raw-body/-/raw-body-2.5.1.tgz
+npm info attempt registry request try #1 at 7:58:21 PM
+npm http request GET https://registry.npmjs.org/ms
+npm http 200 https://registry.npmjs.org/ms
+npm info retry fetch attempt 1 at 7:58:22 PM
+npm info attempt registry request try #1 at 7:58:22 PM
+npm http fetch GET https://registry.npmjs.org/ms/-/ms-2.0.0.tgz
+npm http fetch 200 https://registry.npmjs.org/ms/-/ms-2.0.0.tgz
+npm info attempt registry request try #1 at 7:58:22 PM
+npm http request GET https://registry.npmjs.org/inherits
+npm info attempt registry request try #1 at 7:58:22 PM
+npm http request GET https://registry.npmjs.org/toidentifier
+npm http 200 https://registry.npmjs.org/inherits
+npm info retry fetch attempt 1 at 7:58:22 PM
+npm info attempt registry request try #1 at 7:58:22 PM
+npm http fetch GET https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz
+npm http fetch 200 https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz
+npm http 200 https://registry.npmjs.org/toidentifier
+npm info retry fetch attempt 1 at 7:58:23 PM
+npm info attempt registry request try #1 at 7:58:23 PM
+npm http fetch GET https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.                                                                                                             tgz
+npm http fetch 200 https://registry.npmjs.org/toidentifier/-/toidentifier-1.0.1.                                                                                                             tgz
+npm info attempt registry request try #1 at 7:58:23 PM
+npm http request GET https://registry.npmjs.org/safer-buffer
+npm http 200 https://registry.npmjs.org/safer-buffer
+npm info addNameTag [ 'safer-buffer', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:23 PM
+npm info attempt registry request try #1 at 7:58:23 PM
+npm http fetch GET https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.                                                                                                             tgz
+npm http fetch 200 https://registry.npmjs.org/safer-buffer/-/safer-buffer-2.1.2.                                                                                                             tgz
+npm info attempt registry request try #1 at 7:58:23 PM
+npm http request GET https://registry.npmjs.org/ee-first
+npm http 200 https://registry.npmjs.org/ee-first
+npm info retry fetch attempt 1 at 7:58:23 PM
+npm info attempt registry request try #1 at 7:58:23 PM
+npm http fetch GET https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz
+npm http fetch 200 https://registry.npmjs.org/ee-first/-/ee-first-1.1.1.tgz
+npm info attempt registry request try #1 at 7:58:23 PM
+npm http request GET https://registry.npmjs.org/side-channel
+npm http 200 https://registry.npmjs.org/side-channel
+npm info addNameTag [ 'side-channel', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:24 PM
+npm info attempt registry request try #1 at 7:58:24 PM
+npm http fetch GET https://registry.npmjs.org/side-channel/-/side-channel-1.0.4.                                                                                                             tgz
+npm http fetch 200 https://registry.npmjs.org/side-channel/-/side-channel-1.0.4.                                                                                                             tgz
+npm info attempt registry request try #1 at 7:58:24 PM
+npm http request GET https://registry.npmjs.org/call-bind
+npm info attempt registry request try #1 at 7:58:24 PM
+npm http request GET https://registry.npmjs.org/get-intrinsic
+npm info attempt registry request try #1 at 7:58:24 PM
+npm http request GET https://registry.npmjs.org/object-inspect
+npm http 200 https://registry.npmjs.org/get-intrinsic
+npm info addNameTag [ 'get-intrinsic', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:24 PM
+npm info attempt registry request try #1 at 7:58:24 PM
+npm http fetch GET https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.                                                                                                             3.tgz
+npm http fetch 200 https://registry.npmjs.org/get-intrinsic/-/get-intrinsic-1.1.                                                                                                             3.tgz
+npm http 200 https://registry.npmjs.org/call-bind
+npm info addNameTag [ 'call-bind', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:26 PM
+npm info attempt registry request try #1 at 7:58:26 PM
+npm http fetch GET https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/object-inspect
+npm info addNameTag [ 'object-inspect', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:26 PM
+npm info attempt registry request try #1 at 7:58:26 PM
+npm http fetch GET https://registry.npmjs.org/object-inspect/-/object-inspect-1.                                                                                                             12.2.tgz
+npm http fetch 200 https://registry.npmjs.org/call-bind/-/call-bind-1.0.2.tgz
+npm http fetch 200 https://registry.npmjs.org/object-inspect/-/object-inspect-1.                                                                                                             12.2.tgz
+npm info attempt registry request try #1 at 7:58:26 PM
+npm http request GET https://registry.npmjs.org/function-bind
+npm http 200 https://registry.npmjs.org/function-bind
+npm info addNameTag [ 'function-bind', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:27 PM
+npm info attempt registry request try #1 at 7:58:27 PM
+npm http fetch GET https://registry.npmjs.org/function-bind/-/function-bind-1.1.                                                                                                             1.tgz
+npm http fetch 200 https://registry.npmjs.org/function-bind/-/function-bind-1.1.                                                                                                             1.tgz
+npm info attempt registry request try #1 at 7:58:27 PM
+npm http request GET https://registry.npmjs.org/has
+npm info attempt registry request try #1 at 7:58:27 PM
+npm http request GET https://registry.npmjs.org/has-symbols
+npm http 200 https://registry.npmjs.org/has
+npm info addNameTag [ 'has', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:28 PM
+npm info attempt registry request try #1 at 7:58:28 PM
+npm http fetch GET https://registry.npmjs.org/has/-/has-1.0.3.tgz
+npm http fetch 200 https://registry.npmjs.org/has/-/has-1.0.3.tgz
+npm http 200 https://registry.npmjs.org/has-symbols
+npm info addNameTag [ 'has-symbols', 'latest' ]
+npm info retry fetch attempt 1 at 7:58:28 PM
+npm info attempt registry request try #1 at 7:58:28 PM
+npm http fetch GET https://registry.npmjs.org/has-symbols/-/has-symbols-1.0.3.tg                                                                                                             z
+npm http fetch 200 https://registry.npmjs.org/has-symbols/-/has-symbols-1.0.3.tg                                                                                                             z
+npm info attempt registry request try #1 at 7:58:28 PM
+npm http request GET https://registry.npmjs.org/media-typer
+npm http 200 https://registry.npmjs.org/media-typer
+npm info retry fetch attempt 1 at 7:58:29 PM
+npm info attempt registry request try #1 at 7:58:29 PM
+npm http fetch GET https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tg                                                                                                             z
+npm http fetch 200 https://registry.npmjs.org/media-typer/-/media-typer-0.3.0.tg                                                                                                             z
+npm info attempt registry request try #1 at 7:58:29 PM
+npm http request GET https://registry.npmjs.org/forwarded
+npm info attempt registry request try #1 at 7:58:29 PM
+npm http request GET https://registry.npmjs.org/ipaddr.js
+npm http 200 https://registry.npmjs.org/ipaddr.js
+npm info retry fetch attempt 1 at 7:58:30 PM
+npm info attempt registry request try #1 at 7:58:30 PM
+npm http fetch GET https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz
+npm http 200 https://registry.npmjs.org/forwarded
+npm info retry fetch attempt 1 at 7:58:30 PM
+npm info attempt registry request try #1 at 7:58:30 PM
+npm http fetch GET https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz
+npm http fetch 200 https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-1.9.1.tgz
+npm http fetch 200 https://registry.npmjs.org/forwarded/-/forwarded-0.2.0.tgz
+npm info attempt registry request try #1 at 7:58:30 PM
+npm http request GET https://registry.npmjs.org/mime
+npm info retry fetch attempt 1 at 7:58:30 PM
+npm info attempt registry request try #1 at 7:58:30 PM
+npm http fetch GET https://registry.npmjs.org/ms/-/ms-2.1.3.tgz
+npm http 200 https://registry.npmjs.org/mime
+npm http fetch 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz
+npm info retry fetch attempt 1 at 7:58:30 PM
+npm info attempt registry request try #1 at 7:58:30 PM
+npm http fetch GET https://registry.npmjs.org/mime/-/mime-1.6.0.tgz
+npm http fetch 200 https://registry.npmjs.org/mime/-/mime-1.6.0.tgz
+npm info lifecycle dbdamarch22@1.0.0~preinstall: dbdamarch22@1.0.0
+npm info lifecycle array-flatten@1.1.1~preinstall: array-flatten@1.1.1
+npm info lifecycle bytes@3.1.2~preinstall: bytes@3.1.2
+npm info lifecycle content-type@1.0.4~preinstall: content-type@1.0.4
+npm info lifecycle cookie@0.5.0~preinstall: cookie@0.5.0
+npm info lifecycle cookie-signature@1.0.6~preinstall: cookie-signature@1.0.6
+npm info lifecycle depd@2.0.0~preinstall: depd@2.0.0
+npm info lifecycle destroy@1.2.0~preinstall: destroy@1.2.0
+npm info lifecycle ee-first@1.1.1~preinstall: ee-first@1.1.1
+npm info lifecycle encodeurl@1.0.2~preinstall: encodeurl@1.0.2
+npm info lifecycle escape-html@1.0.3~preinstall: escape-html@1.0.3
+npm info lifecycle etag@1.8.1~preinstall: etag@1.8.1
+npm info lifecycle forwarded@0.2.0~preinstall: forwarded@0.2.0
+npm info lifecycle fresh@0.5.2~preinstall: fresh@0.5.2
+npm info lifecycle function-bind@1.1.1~preinstall: function-bind@1.1.1
+npm info lifecycle has@1.0.3~preinstall: has@1.0.3
+npm info lifecycle has-symbols@1.0.3~preinstall: has-symbols@1.0.3
+npm info lifecycle get-intrinsic@1.1.3~preinstall: get-intrinsic@1.1.3
+npm info lifecycle call-bind@1.0.2~preinstall: call-bind@1.0.2
+npm info lifecycle inherits@2.0.4~preinstall: inherits@2.0.4
+npm info lifecycle ipaddr.js@1.9.1~preinstall: ipaddr.js@1.9.1
+npm info lifecycle media-typer@0.3.0~preinstall: media-typer@0.3.0
+npm info lifecycle merge-descriptors@1.0.1~preinstall: merge-descriptors@1.0.1
+npm info lifecycle methods@1.1.2~preinstall: methods@1.1.2
+npm info lifecycle mime@1.6.0~preinstall: mime@1.6.0
+npm info lifecycle mime-db@1.52.0~preinstall: mime-db@1.52.0
+npm info lifecycle mime-types@2.1.35~preinstall: mime-types@2.1.35
+npm info lifecycle ms@2.0.0~preinstall: ms@2.0.0
+npm info lifecycle debug@2.6.9~preinstall: debug@2.6.9
+npm info lifecycle negotiator@0.6.3~preinstall: negotiator@0.6.3
+npm info lifecycle accepts@1.3.8~preinstall: accepts@1.3.8
+npm info lifecycle object-inspect@1.12.2~preinstall: object-inspect@1.12.2
+npm info lifecycle on-finished@2.4.1~preinstall: on-finished@2.4.1
+npm info lifecycle parseurl@1.3.3~preinstall: parseurl@1.3.3
+npm info lifecycle path-to-regexp@0.1.7~preinstall: path-to-regexp@0.1.7
+npm info lifecycle proxy-addr@2.0.7~preinstall: proxy-addr@2.0.7
+npm info lifecycle range-parser@1.2.1~preinstall: range-parser@1.2.1
+npm info lifecycle safe-buffer@5.2.1~preinstall: safe-buffer@5.2.1
+npm info lifecycle content-disposition@0.5.4~preinstall: content-disposition@0.5                                                                                                             .4
+npm info lifecycle safer-buffer@2.1.2~preinstall: safer-buffer@2.1.2
+npm info lifecycle iconv-lite@0.4.24~preinstall: iconv-lite@0.4.24
+npm info lifecycle ms@2.1.3~preinstall: ms@2.1.3
+npm info lifecycle setprototypeof@1.2.0~preinstall: setprototypeof@1.2.0
+npm info lifecycle side-channel@1.0.4~preinstall: side-channel@1.0.4
+npm info lifecycle qs@6.11.0~preinstall: qs@6.11.0
+npm info lifecycle statuses@2.0.1~preinstall: statuses@2.0.1
+npm info lifecycle toidentifier@1.0.1~preinstall: toidentifier@1.0.1
+npm info lifecycle http-errors@2.0.0~preinstall: http-errors@2.0.0
+npm info lifecycle send@0.18.0~preinstall: send@0.18.0
+npm info lifecycle serve-static@1.15.0~preinstall: serve-static@1.15.0
+npm info lifecycle type-is@1.6.18~preinstall: type-is@1.6.18
+npm info lifecycle unpipe@1.0.0~preinstall: unpipe@1.0.0
+npm info lifecycle finalhandler@1.2.0~preinstall: finalhandler@1.2.0
+npm info lifecycle raw-body@2.5.1~preinstall: raw-body@2.5.1
+npm info lifecycle body-parser@1.20.1~preinstall: body-parser@1.20.1
+npm info lifecycle utils-merge@1.0.1~preinstall: utils-merge@1.0.1
+npm info lifecycle vary@1.1.2~preinstall: vary@1.1.2
+npm info lifecycle expess@0.0.1-security~preinstall: expess@0.0.1-security
+npm info lifecycle express@4.18.2~preinstall: express@4.18.2
+npm info linkStuff array-flatten@1.1.1
+npm info linkStuff bytes@3.1.2
+npm info linkStuff content-type@1.0.4
+npm info linkStuff cookie@0.5.0
+npm info linkStuff cookie-signature@1.0.6
+npm info linkStuff depd@2.0.0
+npm info linkStuff destroy@1.2.0
+npm info linkStuff ee-first@1.1.1
+npm info linkStuff encodeurl@1.0.2
+npm info linkStuff escape-html@1.0.3
+npm info linkStuff etag@1.8.1
+npm info linkStuff forwarded@0.2.0
+npm info linkStuff fresh@0.5.2
+npm info linkStuff function-bind@1.1.1
+npm info linkStuff has@1.0.3
+npm info linkStuff has-symbols@1.0.3
+npm info linkStuff get-intrinsic@1.1.3
+npm info linkStuff call-bind@1.0.2
+npm info linkStuff inherits@2.0.4
+npm info linkStuff ipaddr.js@1.9.1
+npm info linkStuff media-typer@0.3.0
+npm info linkStuff merge-descriptors@1.0.1
+npm info linkStuff methods@1.1.2
+npm info linkStuff mime@1.6.0
+npm info linkStuff mime-db@1.52.0
+npm info linkStuff mime-types@2.1.35
+npm info linkStuff ms@2.0.0
+npm info linkStuff debug@2.6.9
+npm info linkStuff negotiator@0.6.3
+npm info linkStuff accepts@1.3.8
+npm info linkStuff object-inspect@1.12.2
+npm info linkStuff on-finished@2.4.1
+npm info linkStuff parseurl@1.3.3
+npm info linkStuff path-to-regexp@0.1.7
+npm info linkStuff proxy-addr@2.0.7
+npm info linkStuff range-parser@1.2.1
+npm info linkStuff safe-buffer@5.2.1
+npm info linkStuff content-disposition@0.5.4
+npm info linkStuff safer-buffer@2.1.2
+npm info linkStuff iconv-lite@0.4.24
+npm info linkStuff ms@2.1.3
+npm info linkStuff setprototypeof@1.2.0
+npm info linkStuff side-channel@1.0.4
+npm info linkStuff qs@6.11.0
+npm info linkStuff statuses@2.0.1
+npm info linkStuff toidentifier@1.0.1
+npm info linkStuff http-errors@2.0.0
+npm info linkStuff send@0.18.0
+npm info linkStuff serve-static@1.15.0
+npm info linkStuff type-is@1.6.18
+npm info linkStuff unpipe@1.0.0
+npm info linkStuff finalhandler@1.2.0
+npm info linkStuff raw-body@2.5.1
+npm info linkStuff body-parser@1.20.1
+npm info linkStuff utils-merge@1.0.1
+npm info linkStuff vary@1.1.2
+npm info linkStuff expess@0.0.1-security
+npm info linkStuff express@4.18.2
+npm info lifecycle array-flatten@1.1.1~install: array-flatten@1.1.1
+npm info lifecycle bytes@3.1.2~install: bytes@3.1.2
+npm info lifecycle content-type@1.0.4~install: content-type@1.0.4
+npm info lifecycle cookie@0.5.0~install: cookie@0.5.0
+npm info lifecycle cookie-signature@1.0.6~install: cookie-signature@1.0.6
+npm info lifecycle depd@2.0.0~install: depd@2.0.0
+npm info lifecycle destroy@1.2.0~install: destroy@1.2.0
+npm info lifecycle ee-first@1.1.1~install: ee-first@1.1.1
+npm info lifecycle encodeurl@1.0.2~install: encodeurl@1.0.2
+npm info lifecycle escape-html@1.0.3~install: escape-html@1.0.3
+npm info lifecycle etag@1.8.1~install: etag@1.8.1
+npm info lifecycle forwarded@0.2.0~install: forwarded@0.2.0
+npm info lifecycle fresh@0.5.2~install: fresh@0.5.2
+npm info lifecycle function-bind@1.1.1~install: function-bind@1.1.1
+npm info lifecycle has@1.0.3~install: has@1.0.3
+npm info lifecycle has-symbols@1.0.3~install: has-symbols@1.0.3
+npm info lifecycle get-intrinsic@1.1.3~install: get-intrinsic@1.1.3
+npm info lifecycle call-bind@1.0.2~install: call-bind@1.0.2
+npm info lifecycle inherits@2.0.4~install: inherits@2.0.4
+npm info lifecycle ipaddr.js@1.9.1~install: ipaddr.js@1.9.1
+npm info lifecycle media-typer@0.3.0~install: media-typer@0.3.0
+npm info lifecycle merge-descriptors@1.0.1~install: merge-descriptors@1.0.1
+npm info lifecycle methods@1.1.2~install: methods@1.1.2
+npm info lifecycle mime@1.6.0~install: mime@1.6.0
+npm info lifecycle mime-db@1.52.0~install: mime-db@1.52.0
+npm info lifecycle mime-types@2.1.35~install: mime-types@2.1.35
+npm info lifecycle ms@2.0.0~install: ms@2.0.0
+npm info lifecycle debug@2.6.9~install: debug@2.6.9
+npm info lifecycle negotiator@0.6.3~install: negotiator@0.6.3
+npm info lifecycle accepts@1.3.8~install: accepts@1.3.8
+npm info lifecycle object-inspect@1.12.2~install: object-inspect@1.12.2
+npm info lifecycle on-finished@2.4.1~install: on-finished@2.4.1
+npm info lifecycle parseurl@1.3.3~install: parseurl@1.3.3
+npm info lifecycle path-to-regexp@0.1.7~install: path-to-regexp@0.1.7
+npm info lifecycle proxy-addr@2.0.7~install: proxy-addr@2.0.7
+npm info lifecycle range-parser@1.2.1~install: range-parser@1.2.1
+npm info lifecycle safe-buffer@5.2.1~install: safe-buffer@5.2.1
+npm info lifecycle content-disposition@0.5.4~install: content-disposition@0.5.4
+npm info lifecycle safer-buffer@2.1.2~install: safer-buffer@2.1.2
+npm info lifecycle iconv-lite@0.4.24~install: iconv-lite@0.4.24
+npm info lifecycle ms@2.1.3~install: ms@2.1.3
+npm info lifecycle setprototypeof@1.2.0~install: setprototypeof@1.2.0
+npm info lifecycle side-channel@1.0.4~install: side-channel@1.0.4
+npm info lifecycle qs@6.11.0~install: qs@6.11.0
+npm info lifecycle statuses@2.0.1~install: statuses@2.0.1
+npm info lifecycle toidentifier@1.0.1~install: toidentifier@1.0.1
+npm info lifecycle http-errors@2.0.0~install: http-errors@2.0.0
+npm info lifecycle send@0.18.0~install: send@0.18.0
+npm info lifecycle serve-static@1.15.0~install: serve-static@1.15.0
+npm info lifecycle type-is@1.6.18~install: type-is@1.6.18
+npm info lifecycle unpipe@1.0.0~install: unpipe@1.0.0
+npm info lifecycle finalhandler@1.2.0~install: finalhandler@1.2.0
+npm info lifecycle raw-body@2.5.1~install: raw-body@2.5.1
+npm info lifecycle body-parser@1.20.1~install: body-parser@1.20.1
+npm info lifecycle utils-merge@1.0.1~install: utils-merge@1.0.1
+npm info lifecycle vary@1.1.2~install: vary@1.1.2
+npm info lifecycle expess@0.0.1-security~install: expess@0.0.1-security
+npm info lifecycle express@4.18.2~install: express@4.18.2
+npm info lifecycle array-flatten@1.1.1~postinstall: array-flatten@1.1.1
+npm info lifecycle bytes@3.1.2~postinstall: bytes@3.1.2
+npm info lifecycle content-type@1.0.4~postinstall: content-type@1.0.4
+npm info lifecycle cookie@0.5.0~postinstall: cookie@0.5.0
+npm info lifecycle cookie-signature@1.0.6~postinstall: cookie-signature@1.0.6
+npm info lifecycle depd@2.0.0~postinstall: depd@2.0.0
+npm info lifecycle destroy@1.2.0~postinstall: destroy@1.2.0
+npm info lifecycle ee-first@1.1.1~postinstall: ee-first@1.1.1
+npm info lifecycle encodeurl@1.0.2~postinstall: encodeurl@1.0.2
+npm info lifecycle escape-html@1.0.3~postinstall: escape-html@1.0.3
+npm info lifecycle etag@1.8.1~postinstall: etag@1.8.1
+npm info lifecycle forwarded@0.2.0~postinstall: forwarded@0.2.0
+npm info lifecycle fresh@0.5.2~postinstall: fresh@0.5.2
+npm info lifecycle function-bind@1.1.1~postinstall: function-bind@1.1.1
+npm info lifecycle has@1.0.3~postinstall: has@1.0.3
+npm info lifecycle has-symbols@1.0.3~postinstall: has-symbols@1.0.3
+npm info lifecycle get-intrinsic@1.1.3~postinstall: get-intrinsic@1.1.3
+npm info lifecycle call-bind@1.0.2~postinstall: call-bind@1.0.2
+npm info lifecycle inherits@2.0.4~postinstall: inherits@2.0.4
+npm info lifecycle ipaddr.js@1.9.1~postinstall: ipaddr.js@1.9.1
+npm info lifecycle media-typer@0.3.0~postinstall: media-typer@0.3.0
+npm info lifecycle merge-descriptors@1.0.1~postinstall: merge-descriptors@1.0.1
+npm info lifecycle methods@1.1.2~postinstall: methods@1.1.2
+npm info lifecycle mime@1.6.0~postinstall: mime@1.6.0
+npm info lifecycle mime-db@1.52.0~postinstall: mime-db@1.52.0
+npm info lifecycle mime-types@2.1.35~postinstall: mime-types@2.1.35
+npm info lifecycle ms@2.0.0~postinstall: ms@2.0.0
+npm info lifecycle debug@2.6.9~postinstall: debug@2.6.9
+npm info lifecycle negotiator@0.6.3~postinstall: negotiator@0.6.3
+npm info lifecycle accepts@1.3.8~postinstall: accepts@1.3.8
+npm info lifecycle object-inspect@1.12.2~postinstall: object-inspect@1.12.2
+npm info lifecycle on-finished@2.4.1~postinstall: on-finished@2.4.1
+npm info lifecycle parseurl@1.3.3~postinstall: parseurl@1.3.3
+npm info lifecycle path-to-regexp@0.1.7~postinstall: path-to-regexp@0.1.7
+npm info lifecycle proxy-addr@2.0.7~postinstall: proxy-addr@2.0.7
+npm info lifecycle range-parser@1.2.1~postinstall: range-parser@1.2.1
+npm info lifecycle safe-buffer@5.2.1~postinstall: safe-buffer@5.2.1
+npm info lifecycle content-disposition@0.5.4~postinstall: content-disposition@0.                                                                                                             5.4
+npm info lifecycle safer-buffer@2.1.2~postinstall: safer-buffer@2.1.2
+npm info lifecycle iconv-lite@0.4.24~postinstall: iconv-lite@0.4.24
+npm info lifecycle ms@2.1.3~postinstall: ms@2.1.3
+npm info lifecycle setprototypeof@1.2.0~postinstall: setprototypeof@1.2.0
+npm info lifecycle side-channel@1.0.4~postinstall: side-channel@1.0.4
+npm info lifecycle qs@6.11.0~postinstall: qs@6.11.0
+npm info lifecycle statuses@2.0.1~postinstall: statuses@2.0.1
+npm info lifecycle toidentifier@1.0.1~postinstall: toidentifier@1.0.1
+npm info lifecycle http-errors@2.0.0~postinstall: http-errors@2.0.0
+npm info lifecycle send@0.18.0~postinstall: send@0.18.0
+npm info lifecycle serve-static@1.15.0~postinstall: serve-static@1.15.0
+npm info lifecycle type-is@1.6.18~postinstall: type-is@1.6.18
+npm info lifecycle unpipe@1.0.0~postinstall: unpipe@1.0.0
+npm info lifecycle finalhandler@1.2.0~postinstall: finalhandler@1.2.0
+npm info lifecycle raw-body@2.5.1~postinstall: raw-body@2.5.1
+npm info lifecycle body-parser@1.20.1~postinstall: body-parser@1.20.1
+npm info lifecycle utils-merge@1.0.1~postinstall: utils-merge@1.0.1
+npm info lifecycle vary@1.1.2~postinstall: vary@1.1.2
+npm info lifecycle expess@0.0.1-security~postinstall: expess@0.0.1-security
+npm info lifecycle express@4.18.2~postinstall: express@4.18.2
+npm info linkStuff dbdamarch22@1.0.0
+npm info lifecycle dbdamarch22@1.0.0~install: dbdamarch22@1.0.0
+npm info lifecycle dbdamarch22@1.0.0~postinstall: dbdamarch22@1.0.0
+npm info lifecycle dbdamarch22@1.0.0~prepublish: dbdamarch22@1.0.0
+npm info lifecycle dbdamarch22@1.0.0~prepare: dbdamarch22@1.0.0
+dbdamarch22@1.0.0 /app
++-- expess@0.0.1-security
+`-- express@4.18.2
+  +-- accepts@1.3.8
+  | +-- mime-types@2.1.35
+  | | `-- mime-db@1.52.0
+  | `-- negotiator@0.6.3
+  +-- array-flatten@1.1.1
+  +-- body-parser@1.20.1
+  | +-- bytes@3.1.2
+  | +-- destroy@1.2.0
+  | +-- iconv-lite@0.4.24
+  | | `-- safer-buffer@2.1.2
+  | +-- raw-body@2.5.1
+  | `-- unpipe@1.0.0
+  +-- content-disposition@0.5.4
+  +-- content-type@1.0.4
+  +-- cookie@0.5.0
+  +-- cookie-signature@1.0.6
+  +-- debug@2.6.9
+  | `-- ms@2.0.0
+  +-- depd@2.0.0
+  +-- encodeurl@1.0.2
+  +-- escape-html@1.0.3
+  +-- etag@1.8.1
+  +-- finalhandler@1.2.0
+  +-- fresh@0.5.2
+  +-- http-errors@2.0.0
+  | +-- inherits@2.0.4
+  | `-- toidentifier@1.0.1
+  +-- merge-descriptors@1.0.1
+  +-- methods@1.1.2
+  +-- on-finished@2.4.1
+  | `-- ee-first@1.1.1
+  +-- parseurl@1.3.3
+  +-- path-to-regexp@0.1.7
+  +-- proxy-addr@2.0.7
+  | +-- forwarded@0.2.0
+  | `-- ipaddr.js@1.9.1
+  +-- qs@6.11.0
+  | `-- side-channel@1.0.4
+  |   +-- call-bind@1.0.2
+  |   | `-- function-bind@1.1.1
+  |   +-- get-intrinsic@1.1.3
+  |   | +-- has@1.0.3
+  |   | `-- has-symbols@1.0.3
+  |   `-- object-inspect@1.12.2
+  +-- range-parser@1.2.1
+  +-- safe-buffer@5.2.1
+  +-- send@0.18.0
+  | +-- mime@1.6.0
+  | `-- ms@2.1.3
+  +-- serve-static@1.15.0
+  +-- setprototypeof@1.2.0
+  +-- statuses@2.0.1
+  +-- type-is@1.6.18
+  | `-- media-typer@0.3.0
+  +-- utils-merge@1.0.1
+  `-- vary@1.1.2
+
+npm info ok
+Removing intermediate container 78ca725bc51e
+ ---> 72942f852145
+Step 5/7 : COPY .  /app
+ ---> 12378b4bb4b0
+Step 6/7 : CMD  node server.js
+ ---> Running in 6f9926edc59b
+Removing intermediate container 6f9926edc59b
+ ---> 571d10b36858
+Step 7/7 : EXPOSE  9000
+ ---> Running in 846bc268dc2a
+Removing intermediate container 846bc268dc2a
+ ---> fa87506a6cfa
+Successfully built fa87506a6cfa
+Successfully tagged webapp:latest
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+webapp       latest    fa87506a6cfa   58 seconds ago   669MB
+nginx        latest    76c69feac34e   2 weeks ago      142MB
+node         7         d9aed20b68a4   5 years ago      660MB
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker --name Ietweb run -d -p 9000:9000 w                                                                                                             ebapp
+unknown flag: --name
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default
+                           "/root/.docker")
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           ("debug"|"info"|"warn"|"error"|"fatal")
+                           (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default
+                           "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default
+                           "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default
+                           "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a runnin                                                                                                             g container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesyste                                                                                                             m
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by de                                                                                                             fault)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit cod                                                                                                             es
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go                                                                                                             /guides/
+
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                                                                                     NAMES
+b48407f10710   nginx:latest   "/docker-entrypoint.…"   42 minutes ago   Up 42 minutes   0.0.0.0:8080->80/tcp, :::8080->80/t                                                                  cp   gangaServer
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker --name Ietweb run -d -p 9000:9000 webapp:latest
+unknown flag: --name
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                                                                                     NAMES
+b48407f10710   nginx:latest   "/docker-entrypoint.…"   44 minutes ago   Up 44 minutes   0.0.0.0:8080->80/tcp, :::8080->80/t                                                                  cp   gangaServer
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+webapp       latest    fa87506a6cfa   10 minutes ago   669MB
+nginx        latest    76c69feac34e   2 weeks ago      142MB
+node         7         d9aed20b68a4   5 years ago      660MB
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                                                                                     NAMES
+b48407f10710   nginx:latest   "/docker-entrypoint.…"   50 minutes ago   Up 50 minutes   0.0.0.0:8080->80/tcp, :::8080->80/t                                                                  cp   gangaServer
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker --name Ietweb run -d -p 9000:9000 Vivekkb49
+unknown flag: --name
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+b48407f10710   nginx:latest   "/docker-entrypoint.…"   51 minutes ago   Up 51 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp   gangaServer
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker --name Ietweb run -d -p 9000:9000 VivekkbContainer
+unknown flag: --name
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+webapp       latest    fa87506a6cfa   15 minutes ago   669MB
+nginx        latest    76c69feac34e   2 weeks ago      142MB
+node         7         d9aed20b68a4   5 years ago      660MB
+ubuntu@ip-172-31-0-103:~/webapp$ whoami
+ubuntu
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker --name ietweb run -d -p 9000:9000 VivekkbContainer
+unknown flag: --name
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+
+ubuntu@ip-172-31-0-103:~/webapp$ ls
+Dockerfile  README.md  node_modules  package-lock.json  package.json  profile  server.js
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED             STATUS                                                                                                             PORTS                                   NAMES
+b48407f10710   nginx:latest   "/docker-entrypoint.…"   About an hour ago   Up About an hour                                                                                                   0.0.0.0:8080->80/tcp, :::8080->80/tcp   gangaServer
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker run --name Ietweb -d -p 9000:9000 VivekkbContainer
+docker: invalid reference format: repository name must be lowercase.
+See 'docker run --help'.
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker run --name ietweb -d -p 9000:9000 vivekkbcontainer
+Unable to find image 'vivekkbcontainer:latest' locally
+docker: Error response from daemon: pull access denied for vivekkbcontainer, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker run --name ietweb -d -p 9000:9000 vivekkbcontainer:latest
+Unable to find image 'vivekkbcontainer:latest' locally
+docker: Error response from daemon: pull access denied for vivekkbcontainer, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker run --name webapp -d -p  9000:9000 vivekkbcontainer
+Unable to find image 'vivekkbcontainer:latest' locally
+docker: Error response from daemon: pull access denied for vivekkbcontainer, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker run --name webapp -d -p  9000:9000 webapp
+32af33d81ec43503e17e157cf382a74e52d2a324d067f81b7a8948da4b7f2093
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED             STATUS             PORTS                                       NAMES
+32af33d81ec4   webapp         "/bin/sh -c 'node se…"   2 minutes ago       Up 2 minutes       0.0.0.0:9000->9000/tcp, :::9000->9000/tcp   webapp
+b48407f10710   nginx:latest   "/docker-entrypoint.…"   About an hour ago   Up About an hour   0.0.0.0:8080->80/tcp, :::8080->80/tcp       gangaServer
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker images
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+webapp       latest    fa87506a6cfa   28 minutes ago   669MB
+nginx        latest    76c69feac34e   2 weeks ago      142MB
+node         7         d9aed20b68a4   5 years ago      660MB
+ubuntu@ip-172-31-0-103:~/webapp$ sudo docker run webapp
+Server is running on port 9000
+^C
+
+^C

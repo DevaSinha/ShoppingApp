@@ -1,0 +1,87 @@
+ubuntu@ip-172-31-15-254:~$ sudo install update
+
+ubuntu@ip-172-31-15-254:~$ git -v
+
+ubuntu@ip-172-31-15-254:~$ sudo systemctl status docker
+
+ubuntu@ip-172-31-15-254:~$ sudo apt install docker.io
+
+ubuntu@ip-172-31-15-254:~$ sudo docker images
+
+ubuntu@ip-172-31-15-254:~$ git clone https://github.com/ayobabes/AboutUS.git
+
+ubuntu@ip-172-31-15-254:~$ git clone https://github.com/ayobabes/usingDocker.git
+Cloning into 'usingDocker'...
+Username for 'https://github.com': ayobabes
+Password for 'https://ayobabes@github.com':
+
+ubuntu@ip-172-31-15-254:~$ ls
+AboutUS  usingDocker
+
+ubuntu@ip-172-31-15-254:~$ cd ./usingDocker
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ ls
+Dockerfile  README.md  package.json  profile  server.js
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker build -t kszcontainer
+Build an image from a Dockerfile
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker build -t kszcontainer
+"docker build" requires exactly 1 argument.
+Build an image from a Dockerfile
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker build -t kszcontainer  .
+Successfully built cfc68c5c700e
+Successfully tagged kszcontainer:latest
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker images
+REPOSITORY     TAG       IMAGE ID       CREATED          SIZE
+kszcontainer   latest    cfc68c5c700e   34 seconds ago   667MB
+node           7         d9aed20b68a4   5 years ago      660MB
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker run --name webapp -d -p  9000:9000 kszcontainer
+274114fdcc7abd4280bbf0d54718c33c8f4572eada3c7c45028da39d1b26266f
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo systemctl start docker
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo systemctl status docker
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo systemctl start docker
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker pull nginx
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker run --name home -d -p 8080:80 nginx:latest
+f767746216be139c67f3d93e8d845dd2d8f031e298ef39f9fc981016a7679e69
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo systemctl start docker
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                                                                                                                                               NAMES
+f767746216be   nginx:latest   "/docker-entrypoint.…"   6 minutes ago    Up 6 minutes    0.0.0.0:8080->80/tcp, :::8080                                                                                                                        ->80/tcp       home
+274114fdcc7a   kszcontainer   "/bin/sh -c 'node se…"   12 minutes ago   Up 12 minutes   0.0.0.0:9000->9000/tcp, :::90                                                                                                                        00->9000/tcp   webapp
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo systemctl enable docker
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker images
+REPOSITORY     TAG       IMAGE ID       CREATED          SIZE
+kszcontainer   latest    cfc68c5c700e   19 minutes ago   667MB
+nginx          latest    76c69feac34e   2 weeks ago      142MB
+node           7         d9aed20b68a4   5 years ago      660MB
+
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker ps
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                                                                                                                                                               NAMES
+f767746216be   nginx:latest   "/docker-entrypoint.…"   12 minutes ago   Up 12 minutes   0.0.0.0:8080->80/tcp, :::8080                                                                                                                        ->80/tcp       home
+274114fdcc7a   kszcontainer   "/bin/sh -c 'node se…"   19 minutes ago   Up 19 minutes   0.0.0.0:9000->9000/tcp, :::90                                                                                                                        00->9000/tcp   webapp
+
+ubuntu@ip-172-31-15-254:~/usingDocker$ sudo docker run kszcontainer
+Server is running on port 9000
